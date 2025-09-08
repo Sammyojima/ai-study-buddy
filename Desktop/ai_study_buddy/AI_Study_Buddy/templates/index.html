@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Study Buddy</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+  <header>
+    <h1>AI Study Buddy</h1>
+    <p>Generate smart flashcards from your study notes. Free up to 100 words, upgrade for premium.</p>
+  </header>
+
+  <main class="main-app">
+    <textarea id="notes" placeholder="Paste your study notes here... (100 words free)" rows="15"></textarea>
+    <div class="buttons">
+      <button id="generateBtn" class="btn">Generate Flashcards</button>
+      <button id="payButton" class="btn pay-btn">Upgrade to Premium</button>
+    </div>
+    <div id="flashcards" class="flashcards-container"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AI Study Buddy | Designed for Students</p>
+  </footer>
+
+  <script type="module" src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
