@@ -1,0 +1,58 @@
+/* ===========================
+   Part 1: CSS Animations & Transitions
+   =========================== */
+
+/* Button hover effect using CSS transition */
+button {
+  background: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  /* Transition makes the color/scale changes smooth */
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background: #2ecc71;
+  transform: scale(1.1);
+}
+
+/* Box initial style with a slide-in animation when page loads */
+.box {
+  width: 100px;
+  height: 100px;
+  background: tomato;
+  margin-top: 40px;
+  opacity: 0;
+  /* This triggers the slideIn animation automatically on load */
+  animation: slideIn 2s ease forwards;
+}
+
+/* Keyframes for slideIn animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ===========================
+   Part 3: CSS class triggered by JS
+   =========================== */
+
+/* This animation will only start when JS adds the .animate class */
+.animate {
+  animation: bounce 1s ease infinite;
+}
+
+/* Keyframes for bounce animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
